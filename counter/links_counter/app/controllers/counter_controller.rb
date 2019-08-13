@@ -15,9 +15,6 @@ class CounterController < ApplicationController
     case
     when @value_counter.to_i == 0
       @number = @value_counter
-    when @value_counter.to_i < 0
-      @counter.set("1", "0")
-      @number = @counter.get("1")
     when @value_counter.to_i > 0
       @number = @counter.decr("1")
     end
