@@ -17,6 +17,12 @@ This is my first Redis-Rails Web counter project.
 | conf/redis.conf | redis configuration |
 | scripts/provision.sh | Vagrant provision script which purpose is ti install all needed software during boot time|
 | counter | All rails configuration |
+| counter/links_counter/app/controllers/counter_controller.rb | ? |
+| counter/links_counter/app/views/counter/decr.html.erb | ? |
+| counter/links_counter/app/views/counter/incr.html.erb | ? |
+| counter/links_counter/app/views/counter/menu.html.erb | ? |
+| counter/links_counter/app/views/counter/reset.html.erb | ? |
+
 
 ## Instructions
 - clone this repo:
