@@ -55,4 +55,4 @@ http://localhost:3000
 - enjoy !
 
 TODO:
-[ ] Another repo including Vault
+- [ ] Another repo including Vault
