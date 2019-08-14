@@ -13,15 +13,15 @@ This is my first Redis-Rails Web counter project.
 ## Repo content
 | File                   | Description                      |
 |         ---            |                ---               |
-| Vagrantfile | Vagrant template file. Rails-Redis env is going to be cretated based on that file|
-| conf/redis.conf | redis configuration |
-| scripts/provision.sh | Vagrant provision script which purpose is ti install all needed software during boot time|
-| counter | All rails configuration |
-| counter/links_counter/app/controllers/counter_controller.rb | include controller and "actions" configuration |
-| counter/links_counter/app/views/counter/decr.html.erb | configuration of decrement counter view |
-| counter/links_counter/app/views/counter/incr.html.erb | configuration of increment counter view |
-| counter/links_counter/app/views/counter/menu.html.erb | configuration of menu counter view |
-| counter/links_counter/app/views/counter/reset.html.erb | configuration of reset counter view |
+| [Vagrantfile](Vagrantfile) | Vagrant template file. Rails-Redis env is going to be cretated based on that file|
+| [conf/redis.conf](conf/redis.conf) | redis configuration |
+| [scripts/provision.sh](scripts/provision.sh) | Vagrant provision script which purpose is ti install all needed software during boot time|
+| [counter](counter) | All rails configuration |
+| [counter/links_counter/app/controllers/counter_controller.rb](counter/links_counter/app/controllers/counter_controller.rb) | include controller and "actions" configuration |
+| [counter/links_counter/app/views/counter/decr.html.erb](counter/links_counter/app/views/counter/decr.html.erb) | configuration of decrement counter view |
+| [counter/links_counter/app/views/counter/incr.html.erb](counter/links_counter/app/views/counter/incr.html.erb) | configuration of increment counter view |
+| [counter/links_counter/app/views/counter/menu.html.erb](counter/links_counter/app/views/counter/menu.html.erb) | configuration of menu counter view |
+| [counter/links_counter/app/views/counter/reset.html.erb](counter/links_counter/app/views/counter/reset.html.erb) | configuration of reset counter view |
 
 
 ## Instructions
