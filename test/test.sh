@@ -1,7 +1,9 @@
 #!/usr/bin/env bash
+# Debug mode enabled
+set -x
 
 # Test if builded container is running
-if [ "$(docker ps | grep berchev | awk {'print $2'})" = "berchev/counter:0.0.3" ]; then
+if [ "$(docker ps | grep berchev | awk {'print $2'})" = "berchev/counter:latest" ]; then
    echo "Test Pass! Docker image has been builded correctly!"
 else
    echo "Test Failed! Docker image was not builded correctly!"
