@@ -1,0 +1,23 @@
+language: ruby
+dist: xenial
+sudo: required
+services:
+- docker
+- redis-server
+env:
+  global:
+  - REGISTRY_USER=berchev
+  # REGISTRY_PASS
+  - secure: bp0fwy/rV/o3kYJLWiH5dhekqRui7uRV2mtGliCD4uj3wK47BO7+QE/ehRrOMgVSGmWA7ye740EDpIBOUsUsqPuRZC37CFE0yCYBHCYp+pybirO1Aje34lwtHB893r/4AScf5jxim1d2IcZL/X05i7p0Z4IAdxcb8Sw8jl6eicCNIb62tZAabn+o2/6oglxEGUih8u+hdnv+87FoHaaLofHS24o2IZaaK47K3S52xdEF7ktEbiVszSc8n2u5NM88JAT6V7LXn+2eDAbJVcLl5qZ/EHPObniP+og6lguvDoqa4TbOeEIiYRMMmVbfNIFqcwUeYyxgmjkvboyQGVA+j9Y6zYSUUvp0RyHKoivRsP9CKk9hAic93zVjypTf2+qEE3o+0vihwGV6tYCfQDlk85sr4W0FcPgSlamQTlFwmEpQz7pyT5j+RLli6Mla1n5KNjXGHC3bKhLfZYJFCwcWspi+ye834MC/pEVoULXk9jW8hErCndZtS88afA0jIFHjz9kXKqpQRPaXgkRKUi40paB/nG1wFM6dFDgIC7bppA4vuQIZZ7CS8ZgqotMoYiQM+us2MB0tBRsfJlDxz4+a5nw3694dKSxZDb6NdJnsYhGgOxNURXMd/20gAd8cmaUhy1EBxZdr5XFYKbekZFDNhKEXeXRNdyTZuk26VSFCjTI=
+before_install:
+- sudo redis-server /etc/redis/redis.conf --requirepass 'georgiman'
+install:
+- docker build -t berchev/counter:0.0.3 .
+- docker run -d -it --network="host" --rm  berchev/counter:0.0.3 rails s -b '0.0.0.0'
+script:
+- bash test/test.sh
+before_deploy:
+- docker login -u "$REGISTRY_USER" -p "$REGISTRY_PASS"
+deploy:
+  provider: script
+  script: docker push berchev/counter:0.0.3
