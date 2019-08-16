@@ -12,6 +12,8 @@ install:
 - docker run -d --rm --name redis --network="host" redis:4-alpine redis-server --requirepass georgiman
 - docker build -t berchev/counter:0.0.3 .
 - docker run -d -it --network="host" --rm  berchev/counter:0.0.3 rails s -b '0.0.0.0'
+- docker ps
+- netstat -apn | egrep '6379|3000'
 script:
 - bash test/test.sh
 before_deploy:
