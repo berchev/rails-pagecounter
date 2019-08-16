@@ -8,6 +8,8 @@ else
    exit 1
 fi
 
+sleep 25
+
 # Test if Rails website is accessible
 if [ "$(curl -s localhost:3000 | grep "Boys don't cry!" | cut -d'>' -f2- | cut -d'<' -f1)" = "Boys don't cry!" ]; then
   echo "Test Pass! Website is accessible!"
