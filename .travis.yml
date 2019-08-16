@@ -21,4 +21,4 @@ deploy:
   provider: script
   script: docker push berchev/counter:${TRAVIS_TAG}
   on:
-    branch: master
+    tags: true
