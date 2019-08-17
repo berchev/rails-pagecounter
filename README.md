@@ -68,6 +68,12 @@ vagrant ssh
 ```
 docker run -itd --network="host" --rm berchev/counter:0.0.5 rails s -b '0.0.0.0'
 ```
+- open new browser from Host machine and type:
+```
+http://localhost:3000
+```
+- you will see menu page of the Redis-Rails Web counter
+- enjoy !
 
 ## Instructions on HOW to use this project with Vagrant
 - clone this repo:
@@ -98,7 +104,7 @@ bundle install
 ```
 rails server -b 0.0.0.0
 ```
-- open new browser and type:
+- open new browser from Host machine and type:
 ```
 http://localhost:3000
 ```
