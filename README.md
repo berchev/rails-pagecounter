@@ -29,13 +29,13 @@ This is my first Redis-Rails Web counter project. Included in CI/CD pipeline. Th
 ## CI/CD pipeline explanation and diagram
 This project is practical example of Continuous Integration/Continuous Delivery pipeline using Github and Travis CI. What this mean? In other words, **CI/CD** is process which automate testing, building, and deploying software. 
 
-**CI** is process of of developing software. **CI** includes the following steps:
+**CI** is process of of developing software and includes the following steps:
 - push some changes via Pull Request (this triger the testing process)
 - run tests
 - results are explored on the screen
 If test pass, changes can  be merged to Master branch.
 
-**CD** is a process that follows after the merge to Master branch and include following steps:
+**CD** is a process that follows after the merge to Master branch and includes following steps:
 - run tests
 - create an artifact and store it
 - deploy to production (in our case to Docker Hub)
@@ -43,9 +43,10 @@ If test pass, changes can  be merged to Master branch.
 
 Detailed steps of our CI/CD pipeline are showed in the diagram below:
 
+![](https://github.com/berchev/rails-pagecounter/blob/master/diagram_pic/diagram-ci-cd.png)
 
 
-## Instructions on how to use this project with Docker
+## Instructions on HOW to use this project with Docker
 - clone this repo:
 ```
 git clone https://github.com/berchev/rails-pagecounter.git
