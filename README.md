@@ -29,7 +29,7 @@ This is my first Redis-Rails Web counter project. Included in CI/CD pipeline. Th
 ## CI/CD pipeline explanation and diagram
 This project is practical example of Continuous Integration/Continuous Delivery pipeline using Github and Travis CI. What this mean? In other words, **CI/CD** is process which automate testing, building, and deploying software. 
 
-**CI** is process of of developing software and includes the following steps:
+**CI** is process of developing software and includes the following steps:
 - push some changes via Pull Request (this triger the testing process)
 - run tests
 - results are explored on the screen
