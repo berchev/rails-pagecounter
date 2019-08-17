@@ -36,9 +36,10 @@ This project is practical example of Continuous Integration/Continuous Delivery 
 If test pass, changes can  be merged to Master branch.
 
 **CD** is a process that follows after the merge to Master branch and includes following steps:
+- release new version
 - run tests
 - create an artifact and store it
-- deploy to production (in our case to Docker Hub)
+- deploy to production (in our case to Docker Hub for later use.)
 
 
 Detailed steps of our CI/CD pipeline are showed in the diagram below:
