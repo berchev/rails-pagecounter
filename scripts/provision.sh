@@ -17,3 +17,12 @@ grep -Fxq ${PASSWORD} /etc/redis/redis.conf || {
   cp /vagrant/conf/redis.conf /etc/redis/redis.conf
   systemctl restart redis-server
 }
+
+# Install docker
+which docker || {
+  apt-get update
+  apt-get install -y docker.io
+
+  # Make Vagrant user part of the docker group
+  usermod -aG docker vagrant
+}
