@@ -11,7 +11,7 @@ env:
 install:
 - docker run -d --rm --name redis --network="host" redis:4-alpine redis-server --requirepass georgiman
 - docker build -t berchev/counter:latest .
-- docker run -d -it --network="host" --rm  berchev/counter:latest rails s -b '0.0.0.0'
+- docker run -d -it --network="host" --rm  berchev/counter:latest
 script:
 - bash test/test.sh
 before_deploy:

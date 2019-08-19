@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
+
 # Debug mode enabled
-set -x
+#set -x
 
 # Test if builded container is running
 if [ "$(docker ps | grep berchev | awk {'print $2'})" = "berchev/counter:latest" ]; then
@@ -10,8 +11,20 @@ else
    exit 1
 fi
 
-# Using sleep because Counter Container is not completely started during the second test
-sleep 25
+# Make sure container has been started before running the second test
+
+retry=5
+i=0
+while [ ${i} -lt ${retry} ]; do
+       curl -sL http://localhost:3000 > /dev/null 2>&1
+       [ $? -eq 0 ] && break
+       let i++
+       sleep 5
+done
+
+
+unset retry
+unset i
 
 # Test if Rails website is accessible
 if [ "$(curl -s localhost:3000 | grep "Boys don't cry!" | cut -d'>' -f2- | cut -d'<' -f1)" = "Boys don't cry!" ]; then
