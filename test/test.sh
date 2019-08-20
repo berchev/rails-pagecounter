@@ -8,8 +8,7 @@ else
    exit 1
 fi
 
-# Make sure container has been started before running the second test
-
+# Make sure container has been started before running test
 retry=5
 i=0
 while [ ${i} -lt ${retry} ]; do
