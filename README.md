@@ -64,9 +64,13 @@ vagrant up
 ```
 vagrant ssh
 ```
+- build a dev docker container
+```
+docker build -t berchev/counter:latest .
+```
 - run the docker container from latest version:
 ```
-docker run -itd --network="host" --rm berchev/counter:0.0.6
+docker run -itd --network="host" --rm berchev/counter:latest
 ```
 - open new browser from Host machine and type:
 ```
