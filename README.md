@@ -66,7 +66,7 @@ vagrant ssh
 ```
 - run the docker container from latest version:
 ```
-docker run -itd --network="host" --rm berchev/counter:0.0.5 rails s -b '0.0.0.0'
+docker run -itd --network="host" --rm berchev/counter:0.0.6
 ```
 - open new browser from Host machine and type:
 ```
@@ -74,6 +74,19 @@ http://localhost:3000
 ```
 - you will see menu page of the Redis-Rails Web counter
 - enjoy !
+
+## Portainer 
+If you chose to run rails counter as a container, probbably you would like to have more simple and conveninent way of managing and monitoring your container. For that purpose you can use **portainer** on your machine:
+- after you run rails counter as docker image, run this command:
+```
+docker run -d -p 9000:9000 --restart always -v /var/run/docker.sock:/var/run/docker.sock portainer/portaine
+```
+- open new browser from the Host machine and type:
+```
+localhost:9000
+```
+- You will be prompted to type new admin password, then to confirm the password
+- Then you will see friendly User interface which is pretty intuitive and can help you to manage your docker image
 
 ## Instructions on HOW to use this project with Vagrant
 - clone this repo:
