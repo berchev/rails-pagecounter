@@ -5,11 +5,12 @@
 </style>
 
 <h1>Rails page counter reset</h1>
-<!--
-<% if @number == "OK" 
-     value = 0
-   end
-%>
--->
-<h3>Counter value: <%= @number %></h3><br />
-<h4><%= link_to("Back to Menu", {:action=> 'menu'})%></h4>
+<!--<h3>Counter value: <%= @number %></h3><br /> -->
+<h3> 
+  <% if @number.is_a?(Integer)%>
+   Counter value: <%= @number %>
+  <% else %>
+    <%= @number %><%=link_to("Counter health", {:action=> 'health'}) %> 
+  <%end %>
+  <h3><br />
+<h4><%= link_to("Back to Counter Menu", {:action=> 'menu'})%></h4>
