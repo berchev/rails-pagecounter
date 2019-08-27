@@ -6,10 +6,10 @@
 
 <h1>Rails page counter decrement</h1>
 <h3> 
-  <% if @number.is_a?(Integer)%>
-   Counter value: <%= @number %>
+  <% if @result.is_a?(Integer)%>
+   Counter value: <%= @result %>
   <% else %>
-    <%= @number %><%=link_to("Counter health", {:action=> 'health'}) %> 
+    <%= @result %><%=link_to("Counter health", {:action=> 'health'}) %> 
   <%end %>
   <h3><br />
 <h4><%= link_to("Back to Counter Menu", {:action=> 'menu'})%></h4>

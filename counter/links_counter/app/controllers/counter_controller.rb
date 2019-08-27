@@ -6,9 +6,9 @@ class CounterController < ApplicationController
     begin
       @counter = REDIS
       @value_counter = @counter.get("1")
-      @number = @value_counter.to_i
+      @result = @value_counter.to_i
     rescue Errno::ECONNREFUSED, ::Redis::CannotConnectError
-      @number = "Something went wrong! Check health of your counter using this link: "
+      @result = "Something went wrong! Check health of your counter using this link: "
     end
   end
 
@@ -16,10 +16,10 @@ class CounterController < ApplicationController
     begin
       @counter = REDIS
       @value_counter = @counter.incr("1")
-      @number = @value_counter.to_i
-      $incr_stat.push(@number)
+      @result = @value_counter.to_i
+      $incr_stat.incr
     rescue Errno::ECONNREFUSED, ::Redis::CannotConnectError
-      @number = "Something went wrong! Check health of your counter using this link: "
+      @result= "Something went wrong! Check health of your counter using this link: "
     end
   end
 
@@ -29,13 +29,13 @@ class CounterController < ApplicationController
       @value_counter = @counter.get("1")
       case
       when @value_counter.to_i == 0
-        @number = @value_counter.to_i
+        @result = @value_counter.to_i
       when @value_counter.to_i > 0
-        @number = @counter.decr("1").to_i
-        $decr_stat.push(@number)
+        @result = @counter.decr("1").to_i
+        $decr_stat.incr
       end
     rescue Errno::ECONNREFUSED, ::Redis::CannotConnectError
-      @number = "Something went wrong! Check health of your counter using this link: "
+      @result = "Something went wrong! Check health of your counter using this link: "
     end
   end
 
@@ -43,10 +43,10 @@ class CounterController < ApplicationController
     begin
       @counter = REDIS
       @counter.set("1", "0")
-      @number = @counter.get("1").to_i
-      $reset_stat.push(@number)
+      @result = @counter.get("1").to_i
+      $reset_stat.incr
     rescue Errno::ECONNREFUSED, ::Redis::CannotConnectError
-      @number = "Something went wrong! Check health of your counter using this link: "
+      @result = "Something went wrong! Check health of your counter using this link: "
     end
   end
 
@@ -61,8 +61,13 @@ class CounterController < ApplicationController
   end
 
   def metrics
-      @incr_number = $incr_stat.length
-      @decr_number = $decr_stat.length
-      @reset_number = $reset_stat.length
+      @incr_number = $incr_stat.print
+      @decr_number = $decr_stat.print
+      @reset_number = $reset_stat.print
+  end
+
+  # Intentional application crash !
+  def crash
+    exit!
   end
 end
