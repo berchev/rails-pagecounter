@@ -28,7 +28,7 @@ This is my first Redis-Rails Web counter project. Included in CI/CD pipeline. Th
 
 ## Rails Framework diagram
 
-![](https://github.com/berchev/rails-pagecounter/blob/master/diagram_pic/rails-framework.png)
+![](https://github.com/berchev/rails-pagecounter/blob/master/diagram_pic/rails-framework-1.png)
 
 
 ## CI/CD pipeline explanation and diagram
