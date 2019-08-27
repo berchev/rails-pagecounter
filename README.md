@@ -26,6 +26,11 @@ This is my first Redis-Rails Web counter project. Included in CI/CD pipeline. Th
 | [.travis.yml](.travis.yml) | travis ci configuration file. This file is used to setup testing worker machine, to run the test and to build artifact, which will be uploaded directly to Docker Hub  |
 | [Dockerfile](Dockerfile) | Docker configuration file. Based on that file, Travis will build Docker image with Rails-Ragecounter Application |
 
+## Rails Framework diagram
+
+![](https://github.com/berchev/rails-pagecounter/blob/master/diagram_pic/rails-framework.png)
+
+
 ## CI/CD pipeline explanation and diagram
 This project is practical example of Continuous Integration/Continuous Delivery pipeline using Github and Travis CI. What this mean? In other words, **CI/CD** is process which automate testing, building, and deploying software. 
 
