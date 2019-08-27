@@ -136,3 +136,10 @@ http://localhost:3000
 
 TODO:
 - [ ] Another repo including Vault
+- [ ] Include Slack notification when webserver crash
+- [ ] Include Slack notification when health is not OK
+- [ ] Include Slack notification when health is OK
+- [x] Implement metrics link
+- [x] Implement health link
+- [x] Implement crash link
+- [x] Catch interrupt signal and implement custom message
