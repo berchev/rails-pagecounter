@@ -1,5 +1,7 @@
 # rails-pagecounter
-This is my first Redis-Rails Web counter project. Included in CI/CD pipeline. The idea behind that is to develop and deploy the application in safty way, which provides roll-back.
+This is my first Redis-Rails Web counter project with a CI/CD pipeline.
+
+The idea behind that is to develop and deploy the application in safe way, which provides roll-back.
 
 ## Basic counter functionalities
 - increment counter by 1 (starting from 0)
