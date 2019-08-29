@@ -134,11 +134,13 @@ http://localhost:3000
 - enjoy !
 
 
-TODO:
+### TODO
 - [ ] Another repo including Vault
 - [ ] Include Slack notification when app starts
 - [ ] Include Slack notification when health fails
 - [ ] Include Slack notification when reset is used
+
+### DONE
 - [x] Implement metrics link
 - [x] Implement health link
 - [x] Implement crash link
