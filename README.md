@@ -5,6 +5,9 @@ This is my first Redis-Rails Web counter project. Included in CI/CD pipeline. Th
 - increment counter by 1 (starting from 0)
 - decrement counter by 1 (till reach 0)
 - reset counter to zero
+- crash link which will make Puma server to crash
+- healt link which will check healt of Redis database
+- metrics (how many times increment, decrement and reset counter are used)
 
 ## Requirements
 - Virtualbox installed
@@ -22,6 +25,9 @@ This is my first Redis-Rails Web counter project. Included in CI/CD pipeline. Th
 | [counter/links_counter/app/views/counter/incr.html.erb](counter/links_counter/app/views/counter/incr.html.erb) | configuration of increment counter view |
 | [counter/links_counter/app/views/counter/menu.html.erb](counter/links_counter/app/views/counter/menu.html.erb) | configuration of menu counter view |
 | [counter/links_counter/app/views/counter/reset.html.erb](counter/links_counter/app/views/counter/reset.html.erb) | configuration of reset counter view |
+|[counter/links_counter/app/views/counter/crash.html.erb](counter/links_counter/app/views/counter/crash.html.erb)| configuration of crash counter view |
+|[counter/links_counter/app/views/counter/health.html.erb](counter/links_counter/app/views/counter/health.html.erb)| configuration of healt counter view |
+|[counter/links_counter/app/views/counter/metrics.html.erb](counter/links_counter/app/views/counter/metrics.html.erb)| configuration of metrics counter view |
 | [test/test.sh](test/test.sh) | Travis test file. Will check whether docker image is created and whether pagecounter is accessible  |
 | [.travis.yml](.travis.yml) | travis ci configuration file. This file is used to setup testing worker machine, to run the test and to build artifact, which will be uploaded directly to Docker Hub  |
 | [Dockerfile](Dockerfile) | Docker configuration file. Based on that file, Travis will build Docker image with Rails-Ragecounter Application |
