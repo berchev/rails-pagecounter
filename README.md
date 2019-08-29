@@ -75,6 +75,10 @@ vagrant up
 ```
 vagrant ssh
 ```
+- change to /vagrant directory
+```
+cd /vagrant
+```
 - build a dev docker container
 ```
 docker build -t berchev/counter:latest .
@@ -140,7 +144,7 @@ http://localhost:3000
 - enjoy !
 
 
-TODO:
+## TODO:
 - [ ] Another repo including Vault
 - [ ] Include Slack notification when app starts
 - [ ] Include Slack notification when health fails
