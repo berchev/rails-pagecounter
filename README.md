@@ -6,7 +6,7 @@ This is my first Redis-Rails Web counter project. Included in CI/CD pipeline. Th
 - decrement counter by 1 (till reach 0)
 - reset counter to zero
 - crash link which will make Puma server to crash
-- healt link which will check healt of Redis database
+- health link which will check healt of Redis database
 - metrics (how many times increment, decrement and reset counter are used)
 
 ## Requirements
@@ -98,7 +98,7 @@ http://localhost:3000
 If you chose to run rails counter as a container, probbably you would like to have more simple and conveninent way of managing and monitoring your container. For that purpose you can use **portainer** on your machine:
 - after you run rails counter as docker image, run this command:
 ```
-docker run -d -p 9000:9000 --restart always -v /var/run/docker.sock:/var/run/docker.sock portainer/portaine
+docker run -d -p 9000:9000 --restart always -v /var/run/docker.sock:/var/run/docker.sock portainer/portainer
 ```
 - open new browser from the Host machine and type:
 ```
@@ -145,7 +145,7 @@ http://localhost:3000
 
 
 ## TODO:
-- [ ] Another repo including Vault
+- [ ] Include Vault
 - [ ] Include Slack notification when app starts
 - [ ] Include Slack notification when health fails
 - [ ] Include Slack notification when reset is used
