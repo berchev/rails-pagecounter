@@ -60,3 +60,10 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data'
+
+# Add Bootstrap gem to Gemfile
+gem 'bootstrap-sass'
+
+# Add Gems related to JAVA about confirmation message
+gem 'jquery-rails', '~> 4.3', '>= 4.3.3'
+gem 'rails-ujs', '~> 0.1.0'

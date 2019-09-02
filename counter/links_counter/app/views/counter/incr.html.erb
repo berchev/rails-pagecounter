@@ -1,17 +1,15 @@
 <style>
-  h1, h3, h4 {
+  h1, h3 {
     text-align: center;
   }
 </style>
 
 
-<h1>Rails page counter increment</h1>
-<!--<h3>Counter value: <%= @number %><h3><br />-->
-<h3> 
+<h1> 
   <% if @result.is_a?(Integer)%>
    Counter value: <%= @result %>
   <% else %>
-    <%= @result %><%=link_to("Counter health", {:action=> 'health'}) %> 
+    <%= @result %><%=link_to("Counter health", health_path) %> 
   <%end %>
-  <h3><br />
-<h4><%= link_to("Back to Counter Menu", {:action=> 'menu'})%></h5>
+</h1><br />
+<h3><%= link_to("Back to Main page", menu_path, class: "btn btn-lg btn-primary")%></h3>
