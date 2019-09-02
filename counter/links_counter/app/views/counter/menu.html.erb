@@ -1,28 +1,11 @@
+<div class="center jumbotron">
 <style>
-  h1, h2, h3 {
+  h1, h3 {
     text-align: center;
-  }
-
-  h2 {
-  color: red;
-  font-family: monaco;
+    font-family: monaco;
   }
 </style>
 
-<h1>Counter Menu</h1>
-<h3><%= link_to("Get Counter", {:action=> 'get'})%></h3><br />
-<h3><%= link_to("Increment Counter", {:action=> 'incr'})%></h3><br />
-<h3><%= link_to("Decrement Counter", {:action=> 'decr'})%></h3><br />
-<h3><%= link_to("Reset Counter", {:action=> 'reset'})%></h3><br />
-<br />
-<br />
-<br />
-<br />
-<h1>Do not click on CRASH!</h1>
-<h3><%= link_to("CRASH!", {:action=> 'crash'})%></h3><br />
-<br />
-<h1>Counter Status</h1>
-<h3><%= link_to("Health", {:action=> 'health'})%></h3><br />
-<h1>Counter Statistics</h1>
-<h3><%= link_to("Metrics", {:action=> 'metrics'})%></h3><br />
-<h2>Boys don't cry!</h2>
+<h1>Welcome to Rails Pagecounter</h1>
+<h3><%=link_to image_tag("counter.png", alt: "Counter") %></h3>
+</div>

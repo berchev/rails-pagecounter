@@ -1,0 +1,17 @@
+<header class="navbar navbarfixed-top navbar-inverse">
+    <div class="container">
+        <%= link_to "Rails Pagecounter", root_path, id: "logo" %>
+        <nav>
+            <ul class="nav navbar-nav navbar-right">
+                <li><%= link_to("Get", get_path) %></li>
+                <li><%= link_to("Increment", incr_path) %></li>
+                <li><%= link_to("Decrement", decr_path) %></li>
+                <li><%= link_to("Reset", reset_path) %></li>
+                <li><%= link_to("Health", health_path) %></li>
+                <li><%= link_to("Metrics", metrics_path)%></li>
+                <li><%= link_to("Crash", crash_path ,data: { confirm: "Are you sure you WANT to CRASH the counter?" })%></li>
+                <li><%= link_to("#YOLO", yolo_path)%></li>
+            </ul>
+        </nav>
+    </div>   
+</header>

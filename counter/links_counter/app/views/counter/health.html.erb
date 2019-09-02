@@ -1,10 +1,9 @@
 <style>
-  h1, h3, h4 {
+  h1, h3 {
     text-align: center;
   }
 </style>
 
 
-<h1>Rails page counter metrics</h1>
-<h3>Health status: <%= @health %><h3><br />
-<h4><%= link_to("Back to Counter Menu", {:action=> 'menu'})%></h5>
+<h1>Health status: <%= @health %></h1><br />
+<h3><%= link_to("Back to Main page", menu_path, class: "btn btn-lg btn-primary")%></h3>

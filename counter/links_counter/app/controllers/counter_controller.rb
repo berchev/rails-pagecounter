@@ -66,8 +66,12 @@ class CounterController < ApplicationController
       @reset_number = $reset_stat.print
   end
 
-  # Intentional application crash !
+  # Intentional application crash with confirmation !
   def crash
+    exit!
+  end
+
+  def yolo
     exit!
   end
 end
