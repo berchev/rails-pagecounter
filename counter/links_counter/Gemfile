@@ -62,8 +62,7 @@ end
 gem 'tzinfo-data'
 
 # Add Bootstrap gem to Gemfile
-gem 'sassc'
-gem 'bootstrap-sass'
+gem 'bootstrap-sass', '3.3.7'
 
 # Add Gems related to JAVA about confirmation message
 gem 'jquery-rails' 
