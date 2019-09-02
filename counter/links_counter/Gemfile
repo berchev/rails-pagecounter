@@ -62,8 +62,9 @@ end
 gem 'tzinfo-data'
 
 # Add Bootstrap gem to Gemfile
+gem 'sassc'
 gem 'bootstrap-sass'
 
 # Add Gems related to JAVA about confirmation message
-gem 'jquery-rails', '~> 4.3', '>= 4.3.3'
-gem 'rails-ujs', '~> 0.1.0'
+gem 'jquery-rails' 
+gem 'rails-ujs'
