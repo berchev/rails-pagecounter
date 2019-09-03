@@ -27,7 +27,8 @@ The idea behind that is to develop and deploy the application in safe way, which
 | [counter/links_counter/app/views/counter/incr.html.erb](counter/links_counter/app/views/counter/incr.html.erb) | configuration of increment counter view |
 | [counter/links_counter/app/views/counter/menu.html.erb](counter/links_counter/app/views/counter/menu.html.erb) | configuration of menu counter view |
 | [counter/links_counter/app/views/counter/reset.html.erb](counter/links_counter/app/views/counter/reset.html.erb) | configuration of reset counter view |
-|[counter/links_counter/app/views/counter/crash.html.erb](counter/links_counter/app/views/counter/crash.html.erb)| configuration of crash counter view |
+|[counter/links_counter/app/views/counter/crash.html.erb](counter/links_counter/app/views/counter/crash.html.erb)| configuration of crash counter view (will prompt for confirmation) |
+|[counter/links_counter/app/views/counter/yolo.html.erb](counter/links_counter/app/views/counter/yolo.html.erb)| configuration of yolo counter view (will crash the counter immediately) |
 |[counter/links_counter/app/views/counter/health.html.erb](counter/links_counter/app/views/counter/health.html.erb)| configuration of healt counter view |
 |[counter/links_counter/app/views/counter/metrics.html.erb](counter/links_counter/app/views/counter/metrics.html.erb)| configuration of metrics counter view |
 | [test/test.sh](test/test.sh) | Travis test file. Will check whether docker image is created and whether pagecounter is accessible  |
@@ -151,6 +152,7 @@ http://localhost:3000
 - [ ] Include Slack notification when app starts
 - [ ] Include Slack notification when health fails
 - [ ] Include Slack notification when reset is used
+- [ ] Fix rendering the page when you press twice (somehow app remember the last value of the counter. This value is shown first, before actual counter value )
 
 ## DONE:
 - [x] Implement metrics link
