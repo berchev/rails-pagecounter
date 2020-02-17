@@ -160,4 +160,3 @@ http://localhost:3000
 - [x] Implement crash link
 - [x] Catch interrupt signal and implement custom message
 
-- make demo
